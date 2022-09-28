@@ -1,9 +1,16 @@
 import random
 turns = ['rock', 'scissors', 'paper']
+human_turns = []
+computer_turns = []
 
 while(True):
     human_turn = input ('Enter jour turn: ')
     computer_turn = random.choice(turns)
+    
+    human_turns.append(human_turn)
+    computer_turns.append(computer_turn)
+
+
 
     if human_turn == computer_turn:
      print('Draw!')
@@ -15,3 +22,6 @@ while(True):
      print('Human wins!')
     else:
      print('Computer wins!')
+print('You have played {len(human_turn)} times')
+print(human_turn)
+print(computer_turn)
